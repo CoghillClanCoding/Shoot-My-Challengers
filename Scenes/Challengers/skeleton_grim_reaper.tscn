@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://btjf5wvklthx6"]
+
+[ext_resource type="Texture2D" uid="uid://cnayemc743ewj" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v1_1.png" id="1_6d2ij"]
+[ext_resource type="Script" path="res://Scenes/Challengers/skeleton_grim_reaper.gd" id="1_qskpw"]
+[ext_resource type="Texture2D" uid="uid://ce4ottugpgybw" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v1_2.png" id="2_okx3g"]
+[ext_resource type="Texture2D" uid="uid://c00m11cktceon" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v1_3.png" id="3_s7juu"]
+[ext_resource type="Texture2D" uid="uid://b1tg4w84uqyif" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v1_4.png" id="4_hxhx5"]
+[ext_resource type="Texture2D" uid="uid://0elne404llhr" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v2_1.png" id="5_hqp2o"]
+[ext_resource type="Texture2D" uid="uid://bvhq7ssij2mts" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v2_2.png" id="6_4mwvo"]
+[ext_resource type="Texture2D" uid="uid://deqa7ppuu2mal" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v2_3.png" id="7_i8ray"]
+[ext_resource type="Texture2D" uid="uid://b8nmg8g24kurw" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v2_4.png" id="8_s5tqj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3ry0"]
+size = Vector2(16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7p7vo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6d2ij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_okx3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s7juu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hxhx5")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_hqp2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4mwvo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i8ray")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s5tqj")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[node name="SkeletonGrimReaper" type="CharacterBody2D"]
+script = ExtResource("1_qskpw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s3ry0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7p7vo")
+animation = &"Idle"
+autoplay = "Idle"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cjh02yappt781"]
+[gd_scene load_steps=20 format=3 uid="uid://cjh02yappt781"]
 
 [ext_resource type="PackedScene" uid="uid://dj0yksmo1t0ut" path="res://Scenes/Items/large_chest.tscn" id="1_bc0re"]
 [ext_resource type="Script" path="res://Scenes/smc_root.gd" id="1_t4rce"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bc66gum6hc1dx" path="res://Scenes/Hero/hero.tscn" id="10_hcf7k"]
 [ext_resource type="PackedScene" uid="uid://bmraomi5h26q3" path="res://Scenes/Items/gem.tscn" id="11_ngk5q"]
 [ext_resource type="PackedScene" uid="uid://ddkfhgom371v7" path="res://Scenes/Weapons/hero_p_weapon.tscn" id="11_vxbh6"]
+[ext_resource type="PackedScene" uid="uid://bqtgy01s214mh" path="res://Scenes/Weapons/fire_blast.tscn" id="12_uwyqr"]
 [ext_resource type="PackedScene" uid="uid://0guw75f0ngpq" path="res://Scenes/Items/primary_weapon_refill.tscn" id="13_mp1kj"]
 [ext_resource type="PackedScene" uid="uid://bi4hn86eo84hg" path="res://Scenes/Weapons/bomb.tscn" id="14_e4non"]
 [ext_resource type="PackedScene" uid="uid://7mw663fe3sky" path="res://Scenes/Items/secondary_weapon_refill.tscn" id="15_a08jt"]
@@ -51,6 +52,9 @@ position = Vector2(24, 0)
 
 [node name="SkullOfDeath" parent="." instance=ExtResource("9_4hjxe")]
 position = Vector2(772, 379)
+
+[node name="FireBlast" parent="SkullOfDeath" instance=ExtResource("12_uwyqr")]
+position = Vector2(20, 0)
 
 [node name="Hero" parent="." instance=ExtResource("10_hcf7k")]
 position = Vector2(511, 356)

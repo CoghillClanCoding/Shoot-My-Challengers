@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diy3i6valnrq3"
-path="res://.godot/imported/george.png-06876291d7ddf7f7a3f49522c9409746.ctex"
+uid="uid://e2kdpj8v8a4"
+path="res://.godot/imported/scythe.png-e78dba3320bcbf07051a561b76b2d701.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Hero/george.png"
-dest_files=["res://.godot/imported/george.png-06876291d7ddf7f7a3f49522c9409746.ctex"]
+source_file="res://Graphics/Weapons/scythe.png"
+dest_files=["res://.godot/imported/scythe.png-e78dba3320bcbf07051a561b76b2d701.ctex"]
 
 [params]
 

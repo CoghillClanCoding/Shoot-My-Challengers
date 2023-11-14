@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnqfcy6t6aqr0"]
+[gd_scene load_steps=13 format=3 uid="uid://cnqfcy6t6aqr0"]
 
-[ext_resource type="Script" path="res://Scenes/Challengers/SkullOfDeath.gd" id="1_fsni0"]
+[ext_resource type="Script" path="res://Scenes/Characters/Challengers/SkullOfDeath.gd" id="1_fsni0"]
 [ext_resource type="Texture2D" uid="uid://dxccpjv21qmg5" path="res://Graphics/Challengers/SkullOfDeath/skull_v1_1.png" id="2_wc5oo"]
 [ext_resource type="Texture2D" uid="uid://ddwsokltm1blv" path="res://Graphics/Challengers/SkullOfDeath/skull_v1_2.png" id="3_08ijh"]
 [ext_resource type="Texture2D" uid="uid://cwgghkdu3hdv1" path="res://Graphics/Challengers/SkullOfDeath/skull_v1_3.png" id="4_3milt"]
@@ -12,6 +12,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuvk1"]
 size = Vector2(16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6bpyd"]
+radius = 46.1736
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_38s6h"]
 animations = [{
@@ -51,10 +54,15 @@ animations = [{
 }]
 
 [node name="SkullOfDeath" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 151
 script = ExtResource("1_fsni0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="HitArea" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_nuvk1")
+
+[node name="NoticeArea" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6bpyd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_38s6h")

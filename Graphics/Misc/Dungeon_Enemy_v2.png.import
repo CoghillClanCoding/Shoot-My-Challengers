@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diy3i6valnrq3"
-path="res://.godot/imported/george.png-06876291d7ddf7f7a3f49522c9409746.ctex"
+uid="uid://uv5c7kg1wyrx"
+path="res://.godot/imported/Dungeon_Enemy_v2.png-48ad281d4a1958603dedfbe5513debae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Hero/george.png"
-dest_files=["res://.godot/imported/george.png-06876291d7ddf7f7a3f49522c9409746.ctex"]
+source_file="res://Graphics/Misc/Dungeon_Enemy_v2.png"
+dest_files=["res://.godot/imported/Dungeon_Enemy_v2.png-48ad281d4a1958603dedfbe5513debae.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diy3i6valnrq3"
-path="res://.godot/imported/george.png-06876291d7ddf7f7a3f49522c9409746.ctex"
+uid="uid://d2v1hq1427dij"
+path="res://.godot/imported/ground.png-e66fa136e50592e8b405c2831a84c12d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Hero/george.png"
-dest_files=["res://.godot/imported/george.png-06876291d7ddf7f7a3f49522c9409746.ctex"]
+source_file="res://Graphics/Misc/ground.png"
+dest_files=["res://.godot/imported/ground.png-e66fa136e50592e8b405c2831a84c12d.ctex"]
 
 [params]
 

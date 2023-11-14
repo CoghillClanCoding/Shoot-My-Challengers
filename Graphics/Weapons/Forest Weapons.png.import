@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diy3i6valnrq3"
-path="res://.godot/imported/george.png-06876291d7ddf7f7a3f49522c9409746.ctex"
+uid="uid://c5dd32dtwckwv"
+path="res://.godot/imported/Forest Weapons.png-4186170fed2039514729f1a5369aeb89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Hero/george.png"
-dest_files=["res://.godot/imported/george.png-06876291d7ddf7f7a3f49522c9409746.ctex"]
+source_file="res://Graphics/Weapons/Forest Weapons.png"
+dest_files=["res://.godot/imported/Forest Weapons.png-4186170fed2039514729f1a5369aeb89.ctex"]
 
 [params]
 

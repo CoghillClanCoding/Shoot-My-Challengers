@@ -15,7 +15,9 @@ angular_velocity_max = 0.75
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 
-[node name="Bomb" type="Node2D"]
+[node name="Bomb" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 146
 script = ExtResource("1_pn30v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

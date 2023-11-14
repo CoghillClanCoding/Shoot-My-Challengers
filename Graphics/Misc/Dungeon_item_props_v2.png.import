@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uv5c7kg1wyrx"
-path="res://.godot/imported/Dungeon_Enemy_v2.png-e57c362b35320037d4c9dbc9f6137491.ctex"
+uid="uid://5j6d7o0gcmxy"
+path="res://.godot/imported/Dungeon_item_props_v2.png-dc56291be39e09d6012857e40f367a22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Challengers/Dungeon_Enemy_v2.png"
-dest_files=["res://.godot/imported/Dungeon_Enemy_v2.png-e57c362b35320037d4c9dbc9f6137491.ctex"]
+source_file="res://Graphics/Misc/Dungeon_item_props_v2.png"
+dest_files=["res://.godot/imported/Dungeon_item_props_v2.png-dc56291be39e09d6012857e40f367a22.ctex"]
 
 [params]
 

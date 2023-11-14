@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Shoot My Challengers"
-run/main_scene="res://Scenes/smc_root.tscn"
+run/main_scene="res://Scenes/Levels/level_1.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
@@ -21,9 +21,21 @@ Globals="*res://globals.gd"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=500
+window/size/viewport_height=350
+window/size/mode=3
 window/size/resizable=false
+
+[layer_names]
+
+2d_physics/layer_1="Hero"
+2d_physics/layer_2="Challenger"
+2d_physics/layer_3="Hero Weapons"
+2d_physics/layer_4="Challenger Weapons"
+2d_physics/layer_5="Containers and Items"
+2d_physics/layer_6="Power-ups"
+2d_physics/layer_7="Zones and Areas"
+2d_physics/layer_8="Walls and Objects"
 
 [rendering]
 

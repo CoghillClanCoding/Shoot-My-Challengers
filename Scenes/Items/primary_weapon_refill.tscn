@@ -30,7 +30,8 @@ _data = {
 " Skew": SubResource("Animation_rm0ek")
 }
 
-[node name="PrimaryWeaponRefill" type="Node2D"]
+[node name="PrimaryWeaponRefill" type="Area2D"]
+collision_layer = 32
 script = ExtResource("1_ncd06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

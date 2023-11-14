@@ -1,7 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://3p2ux16007x0"]
+[gd_scene load_steps=7 format=3 uid="uid://3p2ux16007x0"]
 
-[ext_resource type="Script" path="res://Scenes/Challengers/vampire.gd" id="1_hmvp6"]
-[ext_resource type="Texture2D" uid="uid://uv5c7kg1wyrx" path="res://Graphics/Challengers/Dungeon_Enemy_v2.png" id="1_lbup8"]
+[ext_resource type="Script" path="res://Scenes/Characters/Challengers/vampire.gd" id="1_hmvp6"]
+[ext_resource type="Texture2D" uid="uid://uv5c7kg1wyrx" path="res://Graphics/Misc/Dungeon_Enemy_v2.png" id="2_hw4fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbkyo"]
+size = Vector2(13, 17)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vo3e"]
+radius = 84.0238
 
 [sub_resource type="Animation" id="Animation_sidrx"]
 resource_name = "Idle"
@@ -25,12 +31,21 @@ _data = {
 "Idle": SubResource("Animation_sidrx")
 }
 
-[node name="Vampire" type="Node2D"]
+[node name="Vampire" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 151
 script = ExtResource("1_hmvp6")
+
+[node name="HitArea" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_wbkyo")
+
+[node name="NoticeArea" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6vo3e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 skew = -0.0749646
-texture = ExtResource("1_lbup8")
+texture = ExtResource("2_hw4fw")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 

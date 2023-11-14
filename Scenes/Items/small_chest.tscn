@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://u56jhr43aik0"]
 
-[ext_resource type="Script" path="res://Scenes/Challengers/SmallChest.gd" id="1_ivspu"]
+[ext_resource type="Script" path="res://Scenes/Characters/Challengers/SmallChest.gd" id="1_ivspu"]
 [ext_resource type="Texture2D" uid="uid://blfb78b8w7nhw" path="res://Graphics/Items/chest_2.png" id="2_ehopc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_svg1m"]
@@ -42,7 +42,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SmallChest" type="CharacterBody2D"]
+[node name="SmallChest" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 4
+input_pickable = true
+mass = 26.83
+freeze = true
 script = ExtResource("1_ivspu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -52,3 +57,5 @@ shape = SubResource("RectangleShape2D_svg1m")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lou7r")
 animation = &"Open"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

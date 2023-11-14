@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qwlmehgxeey6" path="res://Graphics/Items/chest_1.png" id="2_sxkiu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f5cmm"]
-size = Vector2(12, 11.5)
+size = Vector2(16, 13)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qprpw"]
 atlas = ExtResource("2_sxkiu")
@@ -42,12 +42,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="LargeChest" type="CharacterBody2D"]
+[node name="LargeChest" type="RigidBody2D"]
+collision_layer = 16
+collision_mask = 15
 input_pickable = true
+mass = 100.0
+freeze = true
 script = ExtResource("1_bti4a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.25)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_f5cmm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

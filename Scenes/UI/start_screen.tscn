@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://xy5lrbdxpegs"]
+
+[ext_resource type="Script" path="res://Scenes/UI/start_screen.gd" id="1_wiorc"]
+[ext_resource type="PackedScene" uid="uid://t08fae2ksin6" path="res://Scenes/UI/win_screen.tscn" id="2_ouv4p"]
+[ext_resource type="Texture2D" uid="uid://bcmnl0ruwx7eb" path="res://Graphics/UIImages/SMCStartScreen.png" id="2_qqjsp"]
+
+[sub_resource type="Animation" id="Animation_g1vyg"]
+resource_name = "FadeFromBlack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0117647), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s6foq"]
+resource_name = "FadeToBlack"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"goToNextScene"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2rt8b"]
+_data = {
+"FadeFromBlack": SubResource("Animation_g1vyg"),
+"FadeToBlack": SubResource("Animation_s6foq")
+}
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_wiorc")
+winScreen = ExtResource("2_ouv4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("2_qqjsp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+autoplay = "FadeFromBlack"
+libraries = {
+"": SubResource("AnimationLibrary_2rt8b")
+}

@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Shoot My Challengers"
-run/main_scene="res://Scenes/Levels/level_1.tscn"
+run/main_scene="res://Scenes/UI/splash_screen.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]

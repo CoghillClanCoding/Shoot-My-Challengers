@@ -60,4 +60,42 @@ Current groups are:
   - templates
   - wiki
 
+# SMC Specific Classes
+
+For nodes/objects that have common properties and methods we define a single parent class. We then define 
+child classes as we need them. At this time we have only a single inheritance from the parent class. 
+The child classes have no children.
+
+## Current Classes
+
+* Character
+  * Hero
+  * SkeletonWarrior
+  * SkeletonGrimReaper
+  * Vampire
+  * SkullOfDeath
+* Weapon
+  * Bomb
+  * Bolt
+  * Knife
+  * FireBall
+  * Scythe
+  * Laser
+  * FireBlast
+  * ShortShield
+  * LongShield
+* Container
+  * SmallChest
+  * MediumChest
+  * LargeChest
+* Item
+  * Coin
+  * Gem
+  * ExtraLifePoints
+* PowerUp
+  * PrimaryWeaponRefill
+  * SecondaryWeaponRefill
+  * ShortShieldRefill
+  * LongShieldRefill
+  * LifePotion
     

@@ -53,7 +53,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SkullOfDeath" type="CharacterBody2D"]
+[node name="SkullOfDeath" type="CharacterBody2D" groups=["Challenger"]]
 collision_layer = 2
 collision_mask = 151
 script = ExtResource("1_fsni0")

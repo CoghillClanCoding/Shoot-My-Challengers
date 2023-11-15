@@ -53,7 +53,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SkeletonGrimReaper" type="CharacterBody2D"]
+[node name="SkeletonGrimReaper" type="CharacterBody2D" groups=["Challenger"]]
 collision_layer = 2
 collision_mask = 151
 script = ExtResource("1_qskpw")
@@ -61,7 +61,7 @@ startingHealth = 50
 startingSpeed = 20.0
 scaleFactor = 1.0
 
-[node name="NoticeArea" type="Area2D" parent="." groups=["Challenger"]]
+[node name="NoticeArea" type="Area2D" parent="."]
 
 [node name="NoticeAreaCollider" type="CollisionShape2D" parent="NoticeArea"]
 shape = SubResource("CircleShape2D_wf0o0")

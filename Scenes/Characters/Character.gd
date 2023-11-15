@@ -20,6 +20,10 @@ class_name Character
 @onready var health: int = startingHealth		# Set character's starting health
 @onready var speed: float = startingSpeed		# Set character's starting speed
 
+# The following properties are common to all characters
+var immune: bool = false
+var active: bool = false
+
 #+
 # Virtual Godot methods
 #-

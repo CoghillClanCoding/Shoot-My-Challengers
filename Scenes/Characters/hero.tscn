@@ -189,14 +189,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Hero" type="CharacterBody2D"]
+[node name="Hero" type="CharacterBody2D" groups=["Hero"]]
 collision_mask = 186
 script = ExtResource("1_ife15")
 startingHealth = 60
 startingSpeed = 40.0
 scaleFactor = 0.6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="HitArea" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 3)
 shape = SubResource("RectangleShape2D_lyqfm")
 

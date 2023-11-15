@@ -12,3 +12,11 @@ func scaleMe(me: Object, additionalScale: float = 1.0) -> void:
 	print("scaleMe called by ", me.name)
 	me.scale = scaleBy * additionalScale
 	
+#++
+# This block is so that enemies can find the Hero.
+# The hero must constantly update his position here 
+# so other characters can find him.
+#--
+
+var heroPosition: Vector2
+

@@ -15,7 +15,7 @@ angular_velocity_max = 0.75
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 
-[node name="Bomb" type="RigidBody2D"]
+[node name="Bomb" type="RigidBody2D" groups=["HeroWeapon"]]
 collision_layer = 4
 collision_mask = 146
 script = ExtResource("1_pn30v")
@@ -28,3 +28,8 @@ position = Vector2(2, -7)
 process_material = SubResource("ParticleProcessMaterial_bd4u2")
 texture = ExtResource("3_wkhx4")
 trail_enabled = true
+
+[node name="DetentationTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true

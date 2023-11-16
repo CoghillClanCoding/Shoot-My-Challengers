@@ -222,7 +222,7 @@ Items only appear in containers. Gems and coins serve no purpose other than givi
 player a sense of accomplishment by collecting them. Collecting gems and coins only
 increases their respective counters in the UI.
 
-* Increase maximum health by 10,
+* Increase maximum health by 10 and fill set health to maximum health,
 * Gems, and
 * Coins.
 

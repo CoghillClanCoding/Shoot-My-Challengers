@@ -84,7 +84,7 @@ The child classes have no children.
   * FireBlast
   * ShortShield
   * LongShield
-* Container
+* Chest
   * SmallChest
   * MediumChest
   * LargeChest

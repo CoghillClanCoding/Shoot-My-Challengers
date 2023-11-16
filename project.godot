@@ -14,7 +14,7 @@ config/name="Shoot My Challengers"
 run/main_scene="res://Scenes/UI/splash_screen.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="res://skull_icon.svg"
 
 [autoload]
 

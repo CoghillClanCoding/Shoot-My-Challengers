@@ -135,7 +135,7 @@ Current credits can be found in [Game Credits](https://github.com/CoghillClanCod
 
 __Level Screens__
 
-During game play each level will display a UI containing critical stats. This are:
+During game play each level will display a UI containing critical stats. They are:
 
 * Maximum health,
 * Current health,
@@ -152,7 +152,7 @@ The game play consists of 5 levels. When the player starts game play (Start Scre
 Levels are larger than the game viewport. At the beginning of a level the viewport contains the portion of 
 the level the Hero will start from. SMC blocks the player's input at this time.
 
-The Hero character is not visible at this. At a preset time the game shows the Hero in the viewport using
+The Hero character is not visible when the level loads and displays. At a preset time the game shows the Hero in the viewport using
 an effect akin to using a teleport. When the Hero character finishes with the teleport, then SMC enables
 the player's controls so the player can interact with the game.
 
@@ -174,7 +174,7 @@ Game End screen.
 ### Level Difficulty
 
 This game is not meant to be difficult to play or win. It is a demonstration of what can be done. 
-However, the last 3 levels will have more Challengers and harder bosses. Harder. Not ridiculous. 
+However, the last 3 levels will have more Challengers and more difficult bosses. More difficult. Not ridiculous. 
 
 ### Options
 
@@ -203,7 +203,7 @@ This game has no options the player can select.
 #### Containers
 
 These objects contain items. The game developer/coder and the designer statically place these during 
-level design and development. The contents of each container are handled the same 
+level design and development. The contents of each container are handled the same. 
 They are closed when the player starts a new level. 
 
 The player opens a container by shooting it
@@ -234,19 +234,19 @@ The following list shows each power-up, the probability of SMC
 generating it, and its value.
 
 * Extra life points 
-  - 25%
+  - 25% probability
   - 5 to 10 life points
 * Primary weapon refill of 5 units
   - 30%
   - 5 units
 * Secondary weapon refill of 1 unit
-  - 15%
+  - 15% probability
   - 1 unit
 * Short Shield
-  - 20%
+  - 20% probability
   - 1 unit
 * Long Shield refill
-  - 10%
+  - 10% probability
   - 1 unit
 
 #### Level Layout and Decorations
@@ -419,7 +419,7 @@ Bombs remain where they are placed.
 __Notice Range__ - Some Challengers do not engage with the Hero until the Hero enters their notice range. This is
 an area (usually circular) around the challenger that causes the Challenger engage with Hero for combat. The Challenger
 moves towards the Hero until the Hero is in range of the Challenger's weapon(s). The notice range is greater than the
-crossbow's projectile range. The player can choose to fight the Challenger or try to run away from it. Or try to put
+crossbow's projectile range. The player can choose to fight the Challenge, or try to run away from it, or try to put
 an object between the Hero and Challenger.
 
 <!-- 
@@ -447,10 +447,10 @@ These include:
 * Power-ups.
 
 Only the Hero can collect items and power-ups. The player collects items by firing the primary weapon at a container. The container 'opens' and
-displays the items it contained. The player then collects the items by colliding with them. 
+displays the items it contains. The player then collects the items by colliding with them. 
 
 The player collects power-ups by colliding the Hero into them. Items (Containers) that contain other items such as prizes and power-ups
-cannot be opened my Challenger weapons.
+cannot be opened by Challenger weapons.
 
 <!-- 
 This part only focuses on how each object can be picked up, how it will move, and what it will look like. 
@@ -458,7 +458,7 @@ This part only focuses on how each object can be picked up, how it will move, an
 
 #### Actions
 
-SMC will support keyboard/mouse and a game controller. The player can interacts with the UI and controls the Hero with 
+SMC will support keyboard/mouse and a game controller. The player can interact with the UI and controls the Hero with 
 these input devices.
 
 ##### UI Interaction
@@ -627,7 +627,7 @@ Game Start screen.
 
 From the Game Start screen the user can choose start a game, exit the application to the O/S, or display the game credits.
 
-Game Credits displays all the credits for the games. If all credits do not fit on the screen, then the screen will scroll. The
+Game Credits display all the credits for the games. If all credits do not fit on the screen, then the screen will scroll. The
 screen has a "Return" button to go back to the Game Start screen.
 
 SMC displays the Game End screen when the player either wins or dies. It has a "Continue" button to go back to "Game Start".
@@ -725,7 +725,7 @@ short shield. When both are depleted, then no shields are deployed.
 
 #### Vampire
 
-The Vampire is a stationary Challenger. It's primary purpose is to block the passage of the Hero. Being a solid object, it
+The Vampire is a stationary Challenger. Its primary purpose is to block the passage of the Hero. Being a solid object, it
 will also block other Challengers. 
 
 ##### Properties
@@ -748,7 +748,7 @@ The Skeleton Grim Reaper is a medium challenger.
 - *Primary Weapon* - Fire ball.
 - *Secondary Weapon* - Scythe. 
 - *Health* - The staring health of the Skeleton Warrior is such that it can withstand being shot by many crossbow projectiles, and
-it can only be kill at full health by two (2) bombs.
+it can only be killed at full health by two (2) bombs.
 
 #### Skull of Death
 
@@ -869,7 +869,7 @@ __Sound Effects__
 __Music__ - Played when the Hero enters characters 
 navigation region. It must tell the background music to lower its volume so that this music is
 more dominant. When this character dies, or the Hero leaves the navigation region, then this music 
-stops and we must tell the background music to resume normal volume.
+stops, and we must tell the background music to resume normal volume.
 
 __Sound Effects__ 
 
@@ -881,7 +881,7 @@ __Sound Effects__
 
 __Music__
 
-When the Hero first engages (enters the boss' notice area) the boss, then we tell the background music to
+When the Hero first engages (enters the boss' notice area) the boss, we then tell the background music to
 pause and start playing the boss battle music. Even if the Hero leaves the notice area, then the music 
 continues playing. It stops only when either the boss dies or the hero dies. Each level has its own 
 boss music.

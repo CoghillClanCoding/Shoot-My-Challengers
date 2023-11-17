@@ -194,7 +194,7 @@ collision_mask = 186
 script = ExtResource("1_ife15")
 startingHealth = 60
 startingSpeed = 40.0
-scaleFactor = 0.6
+scaleFactor = 0.4
 
 [node name="HitArea" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 3)

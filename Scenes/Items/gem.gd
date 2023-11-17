@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends StaticBody2D
 
 #++
 # Remember to set the gem images in the editor

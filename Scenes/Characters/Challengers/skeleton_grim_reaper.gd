@@ -44,6 +44,7 @@ func _ready() -> void:
 #	Calculate the new path and move us along the path
 #	# If we upgrade the graphics, then we should look at the dude
 func _physics_process(_delta) -> void:
+	return # TAKE THIS OUT WHEN YOU WANT TO DO REAL STUFF
 	# May have to do a called deferred if the first from being null is a problem
 	if active:
 		var next_path_position: Vector2 = $NavigationAgent2D.get_next_path_position()

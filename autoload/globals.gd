@@ -1,18 +1,6 @@
 extends Node
 
 #++
-# This block allows all the tiny spite and sprite sheet images to scale up
-# to a consistent size by calling scaleMe().
-#--
-
-@export var scaleByBase: float = 3.0
-var scaleBy: Vector2 = Vector2(scaleByBase, scaleByBase)
-
-func scaleMe(me: Object, additionalScale: float = 1.0) -> void:
-	print("scaleMe called by ", me.name)
-	me.scale = scaleBy * additionalScale
-	
-#++
 # This block is so that enemies can find the Hero.
 # The hero must constantly update his position here 
 # so other characters can find him.
@@ -70,3 +58,30 @@ var challengersDefeated: int :
 		challengersDefeated = val
 		# Update UI
 		
+
+#++
+# This block allows all the tiny spite and sprite sheet images to scale up
+# to a consistent size by calling scaleMe().
+#--
+
+@export var scaleByBase: float = 3.0
+var scaleBy: Vector2 = Vector2(scaleByBase, scaleByBase)
+
+func scaleMe(me: Object, additionalScale: float = 1.0) -> void:
+	print("scaleMe called by ", me.name)
+	me.scale = scaleBy * additionalScale
+	
+# positionUIImage(me)
+# Called by UI screens to center their images in the viewport
+#
+# Paramters
+#	me: Object					Object to position
+# Return 
+#	None
+#==
+# What the code is doing (steps)
+func positionUIImage(me):
+	var dims: Vector2 = get_viewport().size
+	me.position.x = dims.x/2.0
+	me.position.y = dims.y/2.0
+	

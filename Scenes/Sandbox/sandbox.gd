@@ -1,7 +1,7 @@
 extends Node2D
 
-
-var a: Array = [1,2,3,4,]
+enum en {a,b,c,d}
+var a: Array = [en.a, en.b, en.c, en.d,]
 
 func _ready():
-	print('Size=', a.size())
+	print(a)

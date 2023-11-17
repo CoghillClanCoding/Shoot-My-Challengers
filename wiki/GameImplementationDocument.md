@@ -32,6 +32,7 @@ Current groups are:
   - Audio
     + Music
     + SoundEffects
+  - autoload
   - documentation
     + images
   - Graphics
@@ -99,3 +100,62 @@ The child classes have no children.
   * LongShieldRefill
   * LifePotion
     
+# Level/UI Screen Transitions
+
+## Animations
+
+Each Level and UI Screen has an AnimationPlayer attached to it. The AnimationPlayer has two animations:
+* FadeFromBlack
+* FadeToBlack
+
+FadeFromBlack plays automatically when the scene is loaded. The scene calls AnimationPlayer.play("FadeToBlack") 
+when it's time to display another scene. Also, a method track is added to this animation. It's purpose is to call the
+scene's `goToNextScreen()` method at the end of the animation. This triggers the change to the next scene.
+
+## MCP 
+
+SMC autoloads the MCP (Master Control Program) from file: 
+> `res://master_control_program.gd`
+
+MCP defines the function 
+  > `MCP.changeGameState(newState: state, level: int = 0)`
+
+All the Levels and UI Screens call this function when a new Level or Screen should be loaded. For levels this would be
+when the player wins or loses the level. For UI Screens, this would be when the player clicks on a control on the UI Screen
+that requires a new scene to be loaded.
+
+*__state__* indicates the next screen to load. Valid values are:
+* MCP.state.START - Start a new game
+* MCP.state.WIN - Level finished with a win
+* MSP.state.LOSE - Level finished with a lose
+* MSP.state.CREDITS - Display the game credits
+* MSP.state.LEVEL - Display  `res://Scenes/Levels/Level_n.tscn` where n is the level's number
+* 
+Each Level or UI Screen scene must define the function 
+  ```
+    func goToNextScreen() -> void
+    MCP.changeGameState(MCP.state.X)
+  ```
+
+Where `X` is the appropriate MCP.state value from above.
+
+Because we use FadeToBlack/FadeFromBlack animations on each scene to provide
+smooth transitions the scene's script does not call this function directly. Instead
+the FadeToBlack animation has a Method track that calls `goToNextScreen` at the end
+of the animation.
+
+## UI
+
+SMC has two (2) UI components: Game Control and Play Information.
+
+The player interacts with the Game Control UI to:
+* Start the game
+* Quit the game
+* See the credits
+* Continue the game from a win or loss during play
+
+### Game Control UI
+
+This is consists of buttons allowing the player to choose whether they want to play, quit, continue or see the credits.
+Each scene using a Game Control UI button defines a corresponding signal. When the button is clicked, then the function
+for that button emits the associated signal. The parent node connects to the signal and responds to it.

@@ -10,11 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://deqa7ppuu2mal" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v2_3.png" id="7_i8ray"]
 [ext_resource type="Texture2D" uid="uid://b8nmg8g24kurw" path="res://Graphics/Challengers/SkeletonGrimReaper/skeleton_v2_4.png" id="8_s5tqj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wf0o0"]
-radius = 731.095
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3ry0"]
 size = Vector2(16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wf0o0"]
+radius = 731.095
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7p7vo"]
 animations = [{
@@ -59,17 +59,15 @@ collision_mask = 151
 script = ExtResource("1_qskpw")
 startingHealth = 50
 startingSpeed = 20.0
-scaleFactor = 1.0
+scaleFactor = 1.5
+
+[node name="HitArea" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s3ry0")
 
 [node name="NoticeArea" type="Area2D" parent="."]
 
 [node name="NoticeAreaCollider" type="CollisionShape2D" parent="NoticeArea"]
 shape = SubResource("CircleShape2D_wf0o0")
-
-[node name="HitArea" type="Area2D" parent="."]
-
-[node name="HitAreaCollider" type="CollisionShape2D" parent="HitArea"]
-shape = SubResource("RectangleShape2D_s3ry0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7p7vo")

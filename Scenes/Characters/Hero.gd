@@ -36,8 +36,6 @@ func _ready() -> void:
 	
 	
 func _process(_delta):
-	velocity = (Vector2.RIGHT + Vector2.DOWN) * speed
-	move_and_slide()
 	Globals.heroPosition = position
 #+
 # Class specific methods

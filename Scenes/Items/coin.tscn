@@ -69,7 +69,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Coin" type="Area2D"]
+[node name="Coin" type="StaticBody2D"]
 collision_layer = 16
 script = ExtResource("1_2itpe")
 

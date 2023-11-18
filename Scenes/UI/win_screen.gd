@@ -26,8 +26,7 @@ func _input(event):
 #==
 # Call the MCP to change over to the next screen		
 func goToNextScreen():
-	print('going to LOSE')
-	MCP.changeGameState(MCP.state.LOSE)
+	MCP.changeGameState(MCP.state.START)
 		
 
 # _on_win_screen_ai_continue_game()

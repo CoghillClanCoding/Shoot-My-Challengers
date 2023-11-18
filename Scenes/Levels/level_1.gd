@@ -29,3 +29,22 @@ func _ready() -> void:
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
+	if event is InputEventKey and event.is_pressed():
+		match event.keycode:
+			KEY_W: $AnimationPlayer.play("FadeToBlackWin")
+			KEY_L: $AnimationPlayer.play("FadeToBlackLose")
+		
+		
+# goToNextScreen()
+# This method loads the next screen. 
+#
+# HUGE NOTE: The end of $Sprite2D/AnimationPlayer needs to call this method
+#
+# Paramters
+#	paramname: type				Description
+# Return 
+#	value|None					Description
+#==
+# Call the MCP to change over to the next screen		
+func goToNextScreen(s: int):
+	MCP.changeGameState(s)

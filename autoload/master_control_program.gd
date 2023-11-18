@@ -22,6 +22,7 @@ var preloadedScenes: Array[PackedScene] =[
 ]
 
 # State control
+# Start = 0, Win = 1, Lose = 2, Credits = 3, Exit = 4, Level = 5
 enum state {START, WIN, LOSE, CREDITS, EXIT, LEVEL }
 
 # The following properties must be set in the Inspector by the designer

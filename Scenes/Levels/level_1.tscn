@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://f4wjgyt0g6e6"]
+[gd_scene load_steps=15 format=3 uid="uid://f4wjgyt0g6e6"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/level_1.gd" id="1_om8e3"]
 [ext_resource type="PackedScene" uid="uid://ckmp78u8vt1xy" path="res://Scenes/Levels/ground.tscn" id="2_foxsu"]
@@ -11,7 +11,91 @@
 [ext_resource type="PackedScene" uid="uid://u56jhr43aik0" path="res://Scenes/Items/small_chest.tscn" id="9_myp5g"]
 [ext_resource type="PackedScene" uid="uid://fehsnqjtdooa" path="res://Scenes/Items/medium_chest.tscn" id="10_hthyr"]
 
+[sub_resource type="Animation" id="Animation_gmpaw"]
+resource_name = "FadeFromBlack"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_uyyl2"]
+resource_name = "FadeToBlackLose"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [2],
+"method": &"goToNextScreen"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_dns80"]
+resource_name = "FadeToBlackWin"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1],
+"method": &"goToNextScreen"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l2tgc"]
+_data = {
+"FadeFromBlack": SubResource("Animation_gmpaw"),
+"FadeToBlackLose": SubResource("Animation_uyyl2"),
+"FadeToBlackWin": SubResource("Animation_dns80")
+}
+
 [node name="Level1" type="Node2D"]
+modulate = Color(1, 1, 1, 0)
 script = ExtResource("1_om8e3")
 scaleFactor = 0.3
 
@@ -70,3 +154,9 @@ position = Vector2(72, 770)
 
 [node name="TeleportIn" type="Marker2D" parent="."]
 position = Vector2(72, 769)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "FadeFromBlack"
+libraries = {
+"": SubResource("AnimationLibrary_l2tgc")
+}
